@@ -1,0 +1,7 @@
+.grid {
+    display: grid;
+    grid-gap: $grid-gutter-width;
+    padding: $spacing;
+    @include grid-template-columns;
+    grid-template-rows: auto;
+}

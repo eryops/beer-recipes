@@ -1,0 +1,25 @@
+$media-breakpoints: (
+    xs: 0,
+    sm: 36rem,
+    md: 48rem,
+    lg: 62rem,
+    xl: 75rem,
+    xxl: 92rem,
+);
+
+$num-of-cols: 10;
+
+$grid-gutter-width: 1rem;
+
+$spacing: $grid-gutter-width;
+$spacers: (
+    0: 0,
+    1: $spacing * 0.5,
+    2: $spacing,
+    3: $spacing * 1.5,
+    4: $spacing * 2,
+    5: $spacing * 2.5,
+    6: $spacing * 3,
+    7: $spacing * 3.5,
+    8: $spacing * 4,
+);

@@ -1,0 +1,7 @@
+@mixin grid-template-columns {
+    $cols: [col-1];
+    @for $i from 2 through $num-of-cols + 1 {
+        $cols: append($cols, 1fr [col-#{$i}], space);
+    }
+    grid-template-columns: $cols;
+}

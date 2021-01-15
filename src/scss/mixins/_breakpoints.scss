@@ -1,0 +1,20 @@
+//From Bootstrap 4
+@function breakpoint-min($name, $breakpoints: $media-breakpoints) {
+    $min: map-get($breakpoints, $name);
+    @return if($min != 0, $min, null);
+}
+
+@mixin media-breakpoint-up($name, $breakpoints: $media-breakpoints) {
+    $min: breakpoint-min($name, $breakpoints);
+    @if $min {
+        @media (min-width: $min) {
+            @content;
+        }
+    } @else {
+        @content;
+    }
+}
+
+@function breakpoint-infix($name, $breakpoints: $media-breakpoints) {
+    @return if(breakpoint-min($name, $breakpoints) == null, "", "--#{name}");
+}

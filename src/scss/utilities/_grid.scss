@@ -1,0 +1,14 @@
+@each $breakpoint in map-keys($media-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+        $infix: breakpoint-infix($breakpoint, $media-breakpoints);
+
+        @for $value from 1 through $num-of-cols {
+            .grid__col--start#{$infix}--#{$value} {
+                grid-column-start: col-#{$value};
+            }
+            .grid__col--end#{$infix}--#{$value} {
+                grid-column-end: col-#{$value + 1};
+            }
+        }
+    }
+}

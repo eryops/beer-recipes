@@ -1,0 +1,27 @@
+@each $prop in (margin, padding) {
+    @each $size, $length in $spacers {
+        .#{$prop}--#{$size} {
+            #{$prop}: $length;
+        }
+        .#{$prop}--y--#{$size} {
+            #{$prop}--top: $length;
+            #{$prop}--bottom: $length;
+        }
+        .#{$prop}--x--#{$size} {
+            #{$prop}--left: $length;
+            #{$prop}--right: $length;
+        }
+        .#{$prop}--top--#{$size} {
+            #{$prop}--top: $length;
+        }
+        .#{$prop}--right--#{$size} {
+            #{$prop}--right: $length;
+        }
+        .#{$prop}--bottom--#{$size} {
+            #{$prop}--bottom: $length;
+        }
+        .#{$prop}--left--#{$size} {
+            #{$prop}--left: $length;
+        }
+    }
+}
