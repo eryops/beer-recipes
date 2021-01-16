@@ -23,3 +23,8 @@ $spacers: (
     7: $spacing * 3.5,
     8: $spacing * 4,
 );
+
+$displays: none, inline, inline-block, block, table, table-row, table-cell, flex, inline-flex;
+
+$recipe-lists-menu-width: 20rem;
+$header-height: 3rem;

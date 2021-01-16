@@ -33,12 +33,20 @@ body {
     overflow-x: hidden;
     overflow-y: scroll;
     padding: $spacing;
+    background-color: $background-color-light-theme;
+    color: $color-light-theme;
     @media (prefers-color-scheme: dark) {
         background-color: $background-color-dark-theme;
         color: $color-dark-theme;
     }
     a {
         color: inherit;
+    }
+}
+
+main {
+    @include media-breakpoint-up(md) {
+        padding-left: $recipe-lists-menu-width;
     }
 }
 

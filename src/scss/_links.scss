@@ -1,0 +1,11 @@
+link,
+.link {
+    &--not-visible {
+        position: absolute;
+        color: transparent;
+        &:focus {
+            outline-offset: 0;
+            outline: none;
+        }
+    }
+}

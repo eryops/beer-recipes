@@ -1,0 +1,20 @@
+button:not(.recipe-list__menu__item--button),
+a.button {
+    border: 2px solid $color-light-theme;
+    color: $color-light-theme;
+    padding: 0.3rem 0.5rem;
+    border-radius: 0.3rem;
+    outline: 0;
+    @media (prefers-color-scheme: dark) {
+        background-color: transparent;
+        color: $color-dark-theme;
+        border-color: $color-dark-theme;
+    }
+
+    &:focus {
+        box-shadow: 0 0 0 0.2rem rgba($color-light-theme, 0.25);
+        @media (prefers-color-scheme: dark) {
+            box-shadow: 0 0 0 0.2rem rgba($color-dark-theme, 0.25);
+        }
+    }
+}
